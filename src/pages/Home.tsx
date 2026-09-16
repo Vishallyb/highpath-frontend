@@ -251,7 +251,7 @@ const HeroSection = () => {
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
             <a href="#contact">
               <MagneticButton className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-2xl shadow-blue-500/40 flex items-center gap-2">
-                Consult Our Strategy Team <ArrowUpRight className="h-5 w-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                Consult Ours Strategy Team <ArrowUpRight className="h-5 w-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </MagneticButton>
             </a>
             <a href="#portfolio">
