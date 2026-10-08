@@ -185,7 +185,7 @@ const MagneticButton = ({ children, className, onClick }: { children: React.Reac
 /* ─── Navbar ─── */
 // whatsapp icon
 const WhatsAppButton = () => {
-  const phoneNumber = "91987654xx";
+  const phoneNumber = "(+1)5713531736";
   // const message =
   //   "Hello, I would like to know more about your services.";
 
@@ -714,7 +714,7 @@ const PortfolioSection = () => {
     { title: 'E-Commerce Platform', cat: 'Web Development', image: '/images/portfolio-1.jpg', stat: '300% Sales Increase' },
     { title: 'FinTech Mobile App', cat: 'Mobile Development', image: '/images/portfolio-2.jpg', stat: '500K+ Downloads' },
     { title: 'Brand Launch Campaign', cat: 'Digital Marketing', image: '/images/portfolio-3.jpg', stat: '10M+ Reach' },
-    { title: 'Healthcare SaaS', cat: 'Cloud Solutions', image: '/images/services-web.jpg', stat: '500K+ Patients' },
+    { title: 'Healthcare SaaS', cat: 'Cloud Solutions', image: '/images/health.png', stat: '500K+ Patients' },
   ];
 
   return (
@@ -1054,8 +1054,8 @@ const ContactSection = () => (
           <div className="space-y-5">
             {[
               { icon: Mail, title: 'Email Us', value: 'info@highpathsolutions.com' },
-              { icon: Phone, title: 'Call Us', value: '+1 (555) 123-4567' },
-              { icon: MapPin, title: 'Visit Us', value: '123 Tech Street, San Francisco, CA' },
+              { icon: Phone, title: 'Call Us', value: '(+1)5713531736' },
+              // { icon: MapPin, title: 'Visit Us', value: '123 Tech Street, San Francisco, CA' },
             ].map((c, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 whileHover={{ x: 8 }} className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer">

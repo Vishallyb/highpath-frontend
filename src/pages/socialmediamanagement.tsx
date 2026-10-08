@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
+
 import {
   CheckCircle2,
   Heart,
-  MessageCircle,
-  Play,
   Send,
   Sparkles,
   Target,
@@ -13,14 +13,19 @@ import {
   CalendarDays,
   PenTool,
   Megaphone,
-  Camera,
-  BriefcaseBusiness,
   Share2,
   BarChart3,
   ArrowRight,
   Globe2,
   MousePointerClick,
 } from "lucide-react";
+
+import {
+  FaMeta,
+  FaLinkedinIn,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const SocialMediaManagement = () => {
   const services = [
@@ -64,24 +69,24 @@ const SocialMediaManagement = () => {
 
   const platforms = [
     {
-      name: "Instagram",
+      name: "Meta",
       description: "Build your visual brand and engage your audience.",
-      icon: Camera,
+      icon: FaMeta,
     },
     {
       name: "LinkedIn",
       description: "Grow your professional network and business presence.",
-      icon: BriefcaseBusiness,
+      icon: FaLinkedinIn,
     },
     {
-      name: "Twitter",
+      name: "X",
       description: "Connect with your audience and join conversations.",
-      icon: MessageCircle,
+      icon: FaXTwitter,
     },
     {
       name: "YouTube",
       description: "Create engaging video content for your audience.",
-      icon: Play,
+      icon: FaYoutube,
     },
   ];
 
@@ -163,7 +168,8 @@ const SocialMediaManagement = () => {
               business growth.
             </p>
 
-            {/* <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            {/*
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-[#06bcc9] px-7 py-4 font-semibold text-white shadow-lg shadow-[#06bcc9]/30 transition-all hover:scale-105 hover:bg-[#049ba6]"
@@ -178,7 +184,8 @@ const SocialMediaManagement = () => {
               >
                 Explore Services
               </Link>
-            </div> */}
+            </div>
+            */}
           </motion.div>
         </div>
       </section>
@@ -219,6 +226,7 @@ const SocialMediaManagement = () => {
               {benefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-[#06bcc9]" />
+
                   <span className="font-medium text-slate-700">
                     {benefit}
                   </span>
@@ -237,9 +245,11 @@ const SocialMediaManagement = () => {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
                   <TrendingUp className="h-9 w-9 text-[#06bcc9]" />
+
                   <h3 className="mt-5 text-xl font-bold text-white">
                     Brand Growth
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-slate-300">
                     Build a powerful and recognizable online presence.
                   </p>
@@ -247,9 +257,11 @@ const SocialMediaManagement = () => {
 
                 <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
                   <Heart className="h-9 w-9 text-[#06bcc9]" />
+
                   <h3 className="mt-5 text-xl font-bold text-white">
                     Engagement
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-slate-300">
                     Create meaningful connections with your audience.
                   </p>
@@ -257,9 +269,11 @@ const SocialMediaManagement = () => {
 
                 <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
                   <MousePointerClick className="h-9 w-9 text-[#06bcc9]" />
+
                   <h3 className="mt-5 text-xl font-bold text-white">
                     Conversions
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-slate-300">
                     Turn social engagement into valuable business leads.
                   </p>
@@ -267,9 +281,11 @@ const SocialMediaManagement = () => {
 
                 <div className="rounded-2xl bg-white/10 p-6 backdrop-blur">
                   <Globe2 className="h-9 w-9 text-[#06bcc9]" />
+
                   <h3 className="mt-5 text-xl font-bold text-white">
                     Visibility
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-slate-300">
                     Reach more people across multiple social platforms.
                   </p>
@@ -332,6 +348,7 @@ const SocialMediaManagement = () => {
                     className="mt-6 inline-flex items-center gap-2 font-semibold text-[#06bcc9]"
                   >
                     Learn More
+
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
@@ -432,6 +449,7 @@ const SocialMediaManagement = () => {
         <div className="mx-auto max-w-7xl px-6">
           <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#06bcc9] to-[#0499a3] px-8 py-16 text-center md:px-16 md:py-20">
             <div className="absolute -left-20 -top-20 h-60 w-60 rounded-full bg-white/10 blur-3xl" />
+
             <div className="absolute -bottom-20 -right-20 h-60 w-60 rounded-full bg-white/10 blur-3xl" />
 
             <div className="relative">
@@ -451,6 +469,7 @@ const SocialMediaManagement = () => {
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-[#0499a3] transition-all hover:scale-105"
               >
                 Start Your Project
+
                 <Send className="h-5 w-5" />
               </Link>
             </div>

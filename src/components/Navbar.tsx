@@ -30,13 +30,13 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Website Development', path: '/web-development' },
     { name: 'App Development', path: '/app-development' },
-    { name: 'Lead Generation', path: '/lead-generation' },
+    
     {
-      name: 'Services',
+      name: 'Digital Marketing',
       path: '/services',
       children: [
         
-        
+        { name: 'Lead Generation', path: '/lead-generation' },
         { name: 'Search Engine Optimization', path: '/services/search-engine-optimization' },
         { name: 'Social Media Management', path: '/services/social-media-management',
         },
@@ -150,7 +150,7 @@ const Navbar = () => {
               to="/contact"
               className="rounded-full bg-[#06bcc9] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06bcc9]/30 transition-all duration-300 hover:scale-105 hover:bg-[#0499a3] hover:shadow-xl hover:shadow-[#06bcc9]/40"
             >
-              Get Started
+              Free Consultation
             </Link>
           </div>
 

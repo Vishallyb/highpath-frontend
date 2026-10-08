@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+
+import {
+  FaFacebookF,
+  FaInstagram,
+   FaYoutube,
+  FaXTwitter,
+} from 'react-icons/fa6';
 
 const Footer = () => {
   const footerLinks = {
@@ -34,51 +41,29 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'Facebook',
-      icon: (
-        <svg
-          className="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-        </svg>
-      ),
+      icon: FaFacebookF,
+      url: '#',
     },
-
     {
       name: 'Instagram',
-      icon: (
-        <svg
-          className="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect
-            x="2"
-            y="2"
-            width="20"
-            height="20"
-            rx="5"
-            ry="5"
-          />
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line
-            x1="17.5"
-            y1="6.5"
-            x2="17.51"
-            y2="6.5"
-          />
-        </svg>
-      ),
+      icon: FaInstagram,
+      url: '#',
     },
+    // {
+    //   name: 'LinkedIn',
+    //   icon: FaLinkedinIn,
+    //   url: '#',
+    // },
+    {
+      name: 'X',
+      icon: FaXTwitter,
+      url: '#',
+    },
+    // {
+    //   name: 'YouTube',
+    //   icon: FaYoutube,
+    //   url: '#',
+    // },
   ];
 
   return (
@@ -111,6 +96,7 @@ const Footer = () => {
             {/* Contact Details */}
             <div className="mt-8 space-y-4">
 
+              {/* Email */}
               <a
                 href="mailto:info@highpathsolutions.com"
                 className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white"
@@ -122,26 +108,17 @@ const Footer = () => {
                 </span>
               </a>
 
+              {/* Phone */}
               <a
-                href="tel:+15551234567"
+                href="tel:(+1)5713531736"
                 className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white"
               >
                 <Phone className="h-5 w-5 shrink-0 text-[#06bcc9]" />
 
                 <span>
-                  +1 (555) 123-4567
+                  (+1)5713531736
                 </span>
               </a>
-
-              <div className="flex items-start gap-3 text-slate-400">
-
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#06bcc9]" />
-
-                <span>
-                  123 Tech Street, San Francisco, CA
-                </span>
-
-              </div>
 
             </div>
 
@@ -236,25 +213,32 @@ const Footer = () => {
               Follow Us
             </h4>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
 
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.name}
-                  href="#"
-                  whileHover={{
-                    scale: 1.1,
-                    y: -3,
-                  }}
-                  whileTap={{
-                    scale: 0.95,
-                  }}
-                  className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-800 text-white transition-all duration-300 hover:bg-[#06bcc9]"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{
+                      scale: 1.1,
+                      y: -3,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-800 text-white transition-all duration-300 hover:bg-[#06bcc9]"
+                    aria-label={social.name}
+                    title={social.name}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </motion.a>
+                );
+              })}
 
             </div>
 
@@ -271,7 +255,7 @@ const Footer = () => {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 md:flex-row">
 
           <p className="text-center text-sm text-slate-500 md:text-left">
-            © {new Date().getFullYear()} HighPath Solutions. All rights reserved. Developed by <a href='https://lybtechnology.com/'><b>LYB Technology.</b></a>
+            © {new Date().getFullYear()} HighPath Solutions. All rights reserved.
           </p>
 
         </div>

@@ -60,11 +60,10 @@ const WebDevelopment = () => {
   const technologies = [
     "React",
     "Next.js",
-    "TypeScript",
     "Node.js",
     "WordPress",
     "PHP",
-    "Tailwind CSS",
+    "Shopify",
     "MongoDB",
   ];
 
