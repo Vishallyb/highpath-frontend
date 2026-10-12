@@ -412,39 +412,51 @@ const ServicesSection = () => {
   );
 };
 
-const CalendlySection = () => {
-  useEffect(() => {
-    const existingScript = document.querySelector(
-      'script[src="https://assets.calendly.com/assets/external/widget.js"]'
-    );
+/* ─── Google Calendar Booking Section ─── */
 
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+const CalendlySection = () => {
+  const googleCalendarLink =
+    "https://calendar.app.google/Hhs1srdHftuBBHiV6";
 
   return (
-    <section className="calendly-section">
+    <section id="book-meeting" className="calendly-section">
       <div className="calendly-container">
         <div className="section-heading">
           <span>BOOK A MEETING</span>
+
           <h2>Schedule a Meeting With Us</h2>
+
           <p>
             Choose a convenient time and connect with our team.
           </p>
-        </div>
 
-        <div
-          className="calendly-inline-widget"
-          data-url="https://calendly.com/lyb-developer"
-          style={{
-            minWidth: "320px",
-            height: "700px",
-          }}
-        />
+          <a
+            href={googleCalendarLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="google-calendar-btn"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+              marginTop: "24px",
+              padding: "14px 28px",
+              background: "linear-gradient(to right, #2563eb, #06b6d4)",
+              color: "#ffffff",
+              fontSize: "16px",
+              fontWeight: 600,
+              border: "none",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+          >
+            Book a Meeting
+            <ArrowUpRight className="h-5 w-5" />
+          </a>
+        </div>
       </div>
     </section>
   );
