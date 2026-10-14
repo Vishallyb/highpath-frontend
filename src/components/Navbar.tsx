@@ -146,13 +146,15 @@ const Navbar = () => {
 
           {/* Get Started Button */}
           <div className="hidden lg:flex items-center ml-4">
-            <Link
-              to="/contact"
-              className="rounded-full bg-[#06bcc9] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06bcc9]/30 transition-all duration-300 hover:scale-105 hover:bg-[#0499a3] hover:shadow-xl hover:shadow-[#06bcc9]/40"
-            >
-              Free Consultation
-            </Link>
-          </div>
+  <a
+    href="https://wa.me/15713531736?text=Hello%2C%20I%20would%20like%20a%20free%20consultation."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-[#06bcc9] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06bcc9]/30 transition-all duration-300 hover:scale-105 hover:bg-[#0499a3] hover:shadow-xl hover:shadow-[#06bcc9]/40"
+  >
+    Free Consultation
+  </a>
+</div>
 
           {/* Mobile Menu Button */}
           <button
